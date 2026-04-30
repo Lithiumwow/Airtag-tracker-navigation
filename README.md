@@ -8,8 +8,8 @@ This project runs a small **web server** on your computer. You open a page in th
 
 GitHub stores a **copy** of a project online. You **clone** that copy to your PC (download it with git). When you change files and want to save them to GitHub, you **commit** and **push**. You don’t need to memorize everything—just follow the steps in order, same as installing a game: one window, then the next.
 
-**This repo:** [https://github.com/Lithiumwow/Airtag-tracker-navigation](https://github.com/Lithiumwow/Airtag-tracker-navigation)  
-Clone URL (HTTPS): `https://github.com/Lithiumwow/Airtag-tracker-navigation.git`
+**This repo:** [https://github.com/Lithiumwow/Airtag-tracker-navigation.](https://github.com/Lithiumwow/Airtag-tracker-navigation.)  
+Clone URL (HTTPS): `https://github.com/Lithiumwow/Airtag-tracker-navigation..git` — the repo name ends with a dot, so the URL has **two** dots before `.git`.
 
 ---
 
@@ -49,8 +49,8 @@ On the repo page, green **Code** → copy the HTTPS link.
 
 ```bash
 cd ~/Downloads   # or any folder you like
-git clone https://github.com/Lithiumwow/Airtag-tracker-navigation.git
-cd Airtag-tracker-navigation
+git clone https://github.com/Lithiumwow/Airtag-tracker-navigation..git
+cd "Airtag-tracker-navigation."
 ```
 
 **Windows — folder `D:\Github Projects\airtag`**
@@ -60,7 +60,7 @@ Command Prompt:
 ```cmd
 mkdir "D:\Github Projects" 2>nul
 cd /d "D:\Github Projects"
-git clone https://github.com/Lithiumwow/Airtag-tracker-navigation.git airtag
+git clone https://github.com/Lithiumwow/Airtag-tracker-navigation..git airtag
 cd airtag
 ```
 
@@ -69,7 +69,7 @@ PowerShell:
 ```powershell
 New-Item -ItemType Directory -Force -Path "D:\Github Projects" | Out-Null
 Set-Location "D:\Github Projects"
-git clone https://github.com/Lithiumwow/Airtag-tracker-navigation.git airtag
+git clone https://github.com/Lithiumwow/Airtag-tracker-navigation..git airtag
 Set-Location airtag
 ```
 
@@ -93,7 +93,7 @@ You should see `origin` and the GitHub URL.
 
 ```bash
 git init
-git remote add origin https://github.com/Lithiumwow/Airtag-tracker-navigation.git
+git remote add origin https://github.com/Lithiumwow/Airtag-tracker-navigation..git
 ```
 
 ---
@@ -266,5 +266,5 @@ See **`LICENSE.md`** (MIT for the bundled FindMy library and examples).
 
 ## Repository
 
-- **This project:** [https://github.com/Lithiumwow/Airtag-tracker-navigation](https://github.com/Lithiumwow/Airtag-tracker-navigation)
+- **This project:** [https://github.com/Lithiumwow/Airtag-tracker-navigation.](https://github.com/Lithiumwow/Airtag-tracker-navigation.)
 - **Upstream docs:** [FindMy.py documentation](http://docs.mikealmel.ooo/FindMy.py/)
