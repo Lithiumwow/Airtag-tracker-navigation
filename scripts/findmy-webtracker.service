@@ -1,0 +1,15 @@
+[Unit]
+Description=FindMy.py web tracker (AirTag map UI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/.local/TrackerFindmyTracker
+ExecStart=/root/.local/TrackerFindmyTracker/.venv/bin/python examples/web_tracker_app.py --airtag-json /root/.local/TrackerFindmyTracker/device.json --host 0.0.0.0 --port 8008
+Restart=always
+RestartSec=10
+# Refresh device.json without full restart: SIGUSR1 could be added later; for now edit file then: systemctl restart findmy-webtracker
+
+[Install]
+WantedBy=multi-user.target

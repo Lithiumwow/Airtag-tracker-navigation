@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Secrets and local data — never commit these
+account.json
+device.json
+ani_libs.bin
+location_history.json
+tracker_config.json
+snapped_routes_cache.json
+airtag-export/
+keys/
+
+# Backup / rename copies (never commit)
+account.json.bak*
+account.json.pre-*
+device.json.before-*
+device.json.pre-*
+location_history.pre-*
+location_history.reset-*
+ani_libs.corrupt-*
+
+# Local experiments or full-folder dumps (not for GitHub)
+export-findmy/
+togoprojectGithub/
+airtag-tracker-repo-files.zip
+
+# App runtime
+examples/web_tracker_app.lock
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+*~

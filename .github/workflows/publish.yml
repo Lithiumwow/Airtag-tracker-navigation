@@ -1,0 +1,35 @@
+name: Upload Python Package
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  push:
+    tags:        
+      - 'v[0-9]\.[0-9]+\.[0-9]+'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - uses: './.github/actions/setup-project'
+
+    - name: Prepare README
+      run: ./scripts/refactor_readme.py README.md
+      
+    - name: Build package
+      run: uv build
+    
+    - name: Publish package
+      run: |
+        uv publish --token ${{ secrets.PYPI_API_TOKEN }}
+
+    - name: Create release
+      uses: softprops/action-gh-release@v2
+      with:
+        draft: true
+        files: dist/*
